@@ -1,5 +1,5 @@
 shouldSearch=true 
-poolingTime=$1 // In Seconds
+poolingTime=$1
 
 while [ "$shouldSearch" = true ] 
 do 
