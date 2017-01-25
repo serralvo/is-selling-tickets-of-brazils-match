@@ -1,4 +1,7 @@
-while true
+shouldSearch=true 
+poolingTime=$1 // In Seconds
+
+while [ "$shouldSearch" = true ] 
 do 
 	rm content.txt
 	echo "Searching... 🔎 "
@@ -7,10 +10,11 @@ do
 	if !(grep -q "<h2>VENDAS ON-LINE ENCERRADA.</h2>" content.txt)
 	then
 		echo "Tickets are available! 🇧🇷"
-		# TODO - Notify user and stop pooling
+		shouldSearch=false
+		// TODO: Notify! 
 	else
 		echo "Tickets are not available yet."
 	fi
 
-sleep 5
+sleep "$poolingTime"
 done
