@@ -11,7 +11,7 @@ do
 	then
 		echo "Tickets are available! 🇧🇷"
 		shouldSearch=false
-		// TODO: Notify! 
+		# TODO: Notify! 
 	else
 		echo "Tickets are not available yet."
 	fi
